@@ -1,5 +1,3 @@
-# First-projects
-
 # Hangman Initial Project
 
 # collects word from the user and start game screen
@@ -26,7 +24,7 @@ while screen != wordb and w != 0:
         y = worda.index(letter)
         b = worda.count(letter)
         d = 0
-        # resolves case if there are multiple of a letter
+# resolves case if there are multiple of a letter
         if b > 1:
             while d < b:
                 c = [i for i, x in enumerate(worda) if x == letter]
@@ -41,13 +39,13 @@ while screen != wordb and w != 0:
             screen[y] = letter
             print(screen)
             print("Lives: " + life)
-  # deducts life for wrong input
+# deducts life for wrong input
     except ValueError:
         w = w - 1
         life = "0" * w
         print(screen)
         print("Lives: " + life)
-
+# print end game screen
 if w == 0:
     print("You Lose!")
 else:
